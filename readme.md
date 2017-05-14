@@ -27,3 +27,4 @@ A solution foi divida pela responsabilidade dos projetos:
 - Finalizar a interface da WebAPI e definar os endpoints
 - Finalizar o consumo da api utilizando o AngularJS
 - Configurar container Docker com IIS para rodar o publish da aplicação
+- Add xml de Data/Dados
