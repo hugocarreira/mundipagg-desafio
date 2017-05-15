@@ -1,4 +1,31 @@
-﻿{{vm.title}}
+﻿<div class="row">
+    <div class="container">
+        <div class="container-fluid">
+            <h3 class="page-header">Cadastrar novo ocorrido</h3>
+            <form class="form-horizontal" ng-submit="AdicionarDivida()">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="local_ocorrido">Onde foi? </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="local_ocorrido">
+                    </div>
 
-
-Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+                    <label class="control-label col-sm-2" for="data_ocorrido">Qual dia?</label>
+                    <div class="col-sm-3">
+                        <input type="date" class="form-control" id="data_ocorrido">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="descricao">Descrição </label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="descricao"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
