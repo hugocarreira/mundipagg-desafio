@@ -1,4 +1,6 @@
 .vs/
 Mundipagg.Web/bin
 Mundipagg.Web/obj/Debug
+Mundipagg.API/bin
+Mundipagg.API/obj/Debub
 packages
