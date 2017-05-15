@@ -11,6 +11,7 @@
             var vm = this;
 
             vm.title = 'Bem Vindos ao Controle de Dívidas';    
+            vm.subtitle = 'Apenas uma maneira de organizar seus pagamentos ;)'
          
         }
 })();
