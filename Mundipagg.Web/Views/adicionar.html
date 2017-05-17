@@ -1,56 +1,63 @@
 ﻿<div class="row">
     <div class="container">
         <div class="container-fluid">
-            <h2 class="page-header">{{vm.title}}</h2>
-            
-            <!-- Form de Adicionar Ocorrido -->
-            <form ng-submit="vm.addOcorrido()">
-                <div class="col-lg-12 form-group">
-                    <div class="col-lg-6">
-                        <label for="localOcorrido">Onde foi?</label>
-                        <input type="text"class="form-control" id="localOcorrido" aria-describedby="localHelp" placeholder="Diga em qual lugar aconteceu"  autofocus>
-                        <small id="localHelp" class="form-text text-muted">Diga o nome do lugar onde aconteceu, é uma maneira para você lembrar no futuro :)</small>
+            <fieldset class="form-group">
+                <legend>{{vm.title}}</legend>
+                <!-- Form de Adicionar Ocorrido -->
+                <form>
+                    <div class="col-lg-12 form-group">
+                        <div class="col-lg-6">
+                            <label for="localOcorrido">Onde foi?</label>
+                            <input ng-model="data.Local" type="text" class="form-control" id="Local" aria-describedby="localHelp" placeholder="Diga em qual lugar aconteceu" autofocus>
+                            <small id="localHelp" class="form-text text-muted">Diga o nome do lugar onde aconteceu, é uma maneira para você lembrar no futuro :)</small>
+                        </div>
+                        <div class="col-lg-3">
+                            <label for="Data">Quando?</label>
+                            <input ng-model="data.Data" type="date" class="form-control" id="Data">
+                        </div>
+                        <div class="col-lg-3">
+                            <label for="valorTotal">Qual valor você pagou?</label>
+                            <input ng-model="data.ValorTotal" type="text" class="form-control" id="ValorTotal">
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <label for="dataOcorrido">Quando?</label>
-                        <input type="date" class="form-control" id="dataOcorrido">
+                    <div class="col-lg-12 form-group">
+                        <div class="col-lg-12">
+                            <label for="Descricao">Fale uma pequena descrição</label>
+                            <textarea ng-model="data.Descricao" class="form-control" id="Descricao"></textarea>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <label for="valorOcorrido">Qual valor você pagou?</label>
-                        <input type="text" class="form-control" id="valorOcorrido">
+                    <div class="col-lg-12 form-group">
+                        <a class="btn btn-success" ng-click="vm.addPessoa()"><span class="glyphicon glyphicon-plus-sign"></span> Nova pessoa</a>
                     </div>
-                </div>
-                <div class="col-lg-12 form-group">
-                    <div class="col-lg-12">
-                        <label for="descricaoOcorrido">Fale uma pequena descrição</label>
-                        <textarea class="form-control" id="descricaoOcorrido"></textarea>
-                    </div>
-                </div>
-                <div class="col-lg-12 form-group">
-                    <div class="col-lg-12">
-                        <fieldset class="form-group">
-                            <legend>Quem está te devendo:</legend>
+                    <div class="col-lg-12 form-group">
+                        <div class="col-lg-12">
+                            
                             <div ng-repeat="pessoa in vm.pessoas">
                                 <div class="form-group">
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="valorOcorrido" placeholder="Nome" ng-model="pessoa.nome">
-                                    </div>
                                     <div class="col-lg-3">
-                                        <input type="text" class="form-control" id="valorOcorrido" placeholder="Valor" ng-model="pessoa.valor">
+                                        <input type="text" class="form-control" id="Nome" placeholder="Nome" ng-model="pessoa.Nome">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="Sobrenome" placeholder="Sobrenome" ng-model="pessoa.Sobrenome">
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="ValorPago" placeholder="Valor Pago" ng-model="pessoa.ValorPago">
+                                    </div>
+
+                                    <div class="col-lg-1">
+                                        <button class="btn btn-danger" id="removerPessoa" ng-click="vm.removerPessoa()"><span class="glyphicon glyphicon-remove"></span></button>
                                     </div>
                                 </div>
-
                                 {{vm.pessoas}}
-                            </div>
-                            <div class="col-lg-12">                                
-                                <a class="btn btn-success" ng-click="vm.addPessoa()"><span class="glyphicon glyphicon-plus-sign"></span> Nova pessoa</a>
-                            </div>
+                                
+                            </div>                            
 
-                        </fieldset>
+
+                        </div>
                     </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
-            </form>
+                    <button ng-click="vm.adicionarDivida(data)" type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+            </fieldset>
         </div> 
     </div>
 </div>

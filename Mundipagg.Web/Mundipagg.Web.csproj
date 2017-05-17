@@ -65,6 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Controllers\buscar.controller.js" />
+    <Content Include="App\Factory\buscar.factory.js" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\moment-with-locales.js" />
@@ -902,7 +904,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50074</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50074/</IISUrl>
+          <IISUrl>http://localhost:3000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
