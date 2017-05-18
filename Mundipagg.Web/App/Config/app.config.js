@@ -6,8 +6,9 @@
         .module('Mundipagg.Web')
         .config(config);
 
-        config.$inject = ['$stateProvider', '$urlRouterProvider'];
-        function config($stateProvider, $urlRouterProvider) {
+        config.$inject = ['$stateProvider', '$urlRouterProvider', 'ngProgressLiteProvider'];
+        function config($stateProvider, $urlRouterProvider, ngProgressLiteProvider) {
+            ngProgressLiteProvider.settings.ease = 'ease-in';
             $urlRouterProvider.otherwise("/");
 
             $stateProvider
@@ -37,7 +38,14 @@
                     templateUrl: 'Views/pagar.html',
                     controller: "PagarController",
                     controllerAs: "vm"
-                });
+                })
+
+                .state('home.addpessoa', {
+                    url: 'pessoa/:id',
+                    templateUrl: 'Views/pessoa_cadastrar.html',
+                    controller: "PessoaCadastrarController",
+                    controllerAs: "vm"
+                })
 
         }
 })();

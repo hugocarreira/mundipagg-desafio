@@ -66,13 +66,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Controllers\buscar.controller.js" />
+    <Content Include="App\Controllers\pessoa_cadastrar.controller.js" />
     <Content Include="App\Factory\buscar.factory.js" />
+    <Content Include="App\Factory\divida.factory.js" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery.maskedinput.min.js" />
     <Content Include="Scripts\moment-with-locales.js" />
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\ngprogress-lite.min.js" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -882,6 +885,7 @@
     <Content Include="Views\adicionar.html" />
     <Content Include="Views\buscar.html" />
     <Content Include="Views\home.html" />
+    <Content Include="Views\pessoa_cadastrar.html" />
     <Content Include="Views\pagar.html" />
     <Content Include="Web.config" />
   </ItemGroup>

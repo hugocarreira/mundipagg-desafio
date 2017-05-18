@@ -7,31 +7,32 @@
         .controller('AdicionarController', AdicionarController);
 
 
-    function AdicionarController() {
+    AdicionarController.$inject = ['servicoDivida', '$state', 'ngProgressLite', '$timeout', 'toastr'];
+    function AdicionarController(servicoDivida, $state, ngProgressLite, $timeout, toastr) {
         var vm = this;
+
+        vm.show = 0;
+        ngProgressLite.start();
+        $timeout(function () {
+            ngProgressLite.done();
+            vm.show = 1;
+        }, 250);
 
         vm.title = 'Cadastrar novo ocorrido';
 
-        vm.pessoas = [];
-
         vm.adicionarDivida = adicionarDivida;
-        vm.addPessoa = adicionarPessoa;
-        vm.removerPessoa = removerPessoa;
 
         function adicionarDivida(dados) {
             var formInput = angular.copy(dados);
-            console.log(formInput);
+            formInput.SequencialDivida = Math.floor(Math.random() * 10000);
+            servicoDivida.setDivida(formInput).then(function (successCallback) {
+                toastr.success('Cadastro realizado!');
+                //$state.reload();
+                $state.go('home.addpessoa', { id: formInput.SequencialDivida }); // go to login
+            })
         }
 
-        function adicionarPessoa() {
-            var novaPessoa = vm.pessoas.length + 1;
-            vm.pessoas.push({ 'pessoa': novaPessoa });
-        }
-
-        function removerPessoa() {
-            var ultimaPessoa = vm.pessoas.length - 1;
-            vm.pessoas.splice(ultimaPessoa);
-        };
+        
     }
 })();
 

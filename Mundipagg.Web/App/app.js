@@ -4,6 +4,11 @@
 
     angular.module('Mundipagg.Web', [
         'ui.router',
-        'Mundipagg.Web.Controllers'
+        'Mundipagg.Web.Controllers',
+        'ngAnimate',
+
+        /* Modulos Externos */
+        'ngProgressLite',
+        'toastr'
     ]);
 })();

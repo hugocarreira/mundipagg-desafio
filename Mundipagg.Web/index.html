@@ -5,13 +5,46 @@
     <title>Mundipagg - Controle de Dívidas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-ui-router.min.js"></script>
-    <script src="Scripts/angular-sanitize.min.js"></script>
-    
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/angular-toastr/dist/angular-toastr.css" />
+    <script type="text/javascript" src="Scripts/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-animate.min.js"></script>
+    <script type="text/javascript" src="Scripts/ngprogress-lite.min.js"></script>
+    <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
+    <style>
+        .ngProgressLite {
+            pointer-events: none;
+        }
+
+        .ngProgressLiteBar {
+            background: #29d;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            height: 2px;
+        }
+
+        .ngProgressLite .ngProgressLiteBarShadow {
+            display: block;
+            position: absolute;
+            right: 0px;
+            width: 100px;
+            height: 100%;
+            box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+            opacity: 1;
+            -webkit-transform: rotate(3deg) translate(0px, -4px);
+            -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px);
+        }
+    </style>
+
 </head>
 <body ng-app="Mundipagg.Web">
+
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header navbar-left">
@@ -31,20 +64,21 @@
         </div>
     </div>
 
-    <script src="App/app.js"></script>
-    <script src="App/Config/app.config.js"></script>
-    <script src="App/Config/app.controllers.js"></script>
-    <script src="App/Controllers/home.controller.js"></script>
-    <script src="App/Controllers/adicionar.controller.js"></script>
-    <script src="App/Controllers/buscar.controller.js"></script>
-    <script src="App/Controllers/pagar.controller.js"></script>
+    <script type="text/javascript" src="App/app.js"></script>
+    <script type="text/javascript" src="App/Config/app.config.js"></script>
+    <script type="text/javascript" src="App/Config/app.controllers.js"></script>
+    <script type="text/javascript" src="App/Controllers/home.controller.js"></script>
+    <script type="text/javascript" src="App/Controllers/adicionar.controller.js"></script>
+    <script type="text/javascript" src="App/Controllers/buscar.controller.js"></script>
+    <script type="text/javascript" src="App/Controllers/pessoa_cadastrar.controller.js"></script>
+    <script type="text/javascript" src="App/Controllers/pagar.controller.js"></script>
 
-    <script src="App/Factory/buscar.factory.js"></script>
+    <script type="text/javascript" src="App/Factory/buscar.factory.js"></script>
+    <script type="text/javascript" src="App/Factory/divida.factory.js"></script>
 
 
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
     
 </body>
 </html>

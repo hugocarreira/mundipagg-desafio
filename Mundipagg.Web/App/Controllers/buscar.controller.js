@@ -7,9 +7,16 @@
         .controller('BuscarController', BuscarController);
 
 
-    BuscarController.$inject = ['servicoBuscar'];
-    function BuscarController(servicoBuscar) {
+    BuscarController.$inject = ['servicoBuscar', 'ngProgressLite', '$timeout'];
+    function BuscarController(servicoBuscar, ngProgressLite, $timeout) {
         var vm = this;
+
+        vm.show = 0;
+        ngProgressLite.start();
+        $timeout(function () {
+            ngProgressLite.done();
+            vm.show = 1;
+        }, 250);
 
         vm.title = 'Todos ocorridos';
 

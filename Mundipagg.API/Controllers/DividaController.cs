@@ -37,56 +37,7 @@ namespace Mundipagg.API.Controllers
 
             return Ok(searchResponse.Documents);
         }
-        #endregion
-
-        #region Métodos p/ Pessoas
-
-        [HttpPost]
-        public IHttpActionResult setPessoa(Pessoa pessoa)
-        {
-            var indexResponse = service.Index(pessoa);
-            return Ok(indexResponse);
-        }
-
-        public IHttpActionResult getPessoas()
-        {
-            var searchResponse = service.Search<Pessoa>(s => s.MatchAll());
-
-            return Ok(searchResponse.Documents);
-        }
-
-        [HttpPost]
-        public IHttpActionResult getByNome([FromBody] Pessoa pessoa)
-        {
-            var searchResponse = service.Search<Pessoa>(s => s
-                .Query(q => q
-                    .Match(m => m
-                        .Field(f => f.Nome)
-                        .Query(pessoa.Nome)
-                    )
-                )
-            );
-
-            return Ok(searchResponse.Documents);
-        }
-
-        [HttpPost]
-        public IHttpActionResult getBySobrenome([FromBody] Pessoa pessoa)
-        {
-            var searchResponse = service.Search<Pessoa>(s => s
-                .Query(q => q
-                    .Match(m => m
-                        .Field(f => f.Sobrenome)
-                        .Query(pessoa.Sobrenome)
-                    )
-                )
-            );
-
-            return Ok(searchResponse.Documents);
-        }
-
-        #endregion
-
+        #endregion        
   
     }
 }
