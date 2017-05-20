@@ -10,6 +10,7 @@ using Nest;
 
 namespace Mundipagg.API.Controllers
 {
+    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class PessoaController : ApiController
     {
         private ElasticClient service;
@@ -37,13 +38,15 @@ namespace Mundipagg.API.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult getByNome([FromBody] Pessoa pessoa)
+        public IHttpActionResult getbyseq([FromBody] Pessoa pessoa)
         {
+            var seqDivida = Convert.ToString(pessoa.SequencialPessoaDivida);
+
             var searchResponse = service.Search<Pessoa>(s => s
                 .Query(q => q
                     .Match(m => m
-                        .Field(f => f.Nome)
-                        .Query(pessoa.Nome)
+                        .Field(f => f.SequencialPessoaDivida)
+                        .Query(seqDivida)
                     )
                 )
             );

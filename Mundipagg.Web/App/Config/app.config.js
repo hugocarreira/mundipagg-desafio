@@ -40,10 +40,10 @@
                     controllerAs: "vm"
                 })
 
-                .state('home.addpessoa', {
-                    url: 'pessoa/:id',
-                    templateUrl: 'Views/pessoa_cadastrar.html',
-                    controller: "PessoaCadastrarController",
+                .state('home.divida', {
+                    url: 'divida/:id',
+                    templateUrl: 'Views/pessoa.html',
+                    controller: "PessoaController",
                     controllerAs: "vm"
                 })
 

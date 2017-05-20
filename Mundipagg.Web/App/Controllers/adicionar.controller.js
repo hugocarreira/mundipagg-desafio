@@ -27,10 +27,10 @@
             formInput.SequencialDivida = Math.floor(Math.random() * 10000);
             servicoDivida.setDivida(formInput).then(function (successCallback) {
                 toastr.success('Cadastro realizado!');
-                //$state.reload();
-                $state.go('home.addpessoa', { id: formInput.SequencialDivida }); // go to login
+                $state.go('home.divida', { id: formInput.SequencialDivida });
             })
         }
+
 
         
     }

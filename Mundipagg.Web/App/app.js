@@ -9,6 +9,7 @@
 
         /* Modulos Externos */
         'ngProgressLite',
-        'toastr'
+        'toastr',
+        'ui.utils.masks'
     ]);
 })();
