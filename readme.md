@@ -18,25 +18,25 @@ A solution foi divida pela responsabilidade dos projetos:
 
 - URL: http://localhost:2017
 
-#### Tecnologias
+### Tecnologias
 
-> C# como linguagem de programação usando o framework .NET 4.6
-> WebAPi Restful
-> ElasticSearch v5.4.0 - [URL](https://github.com/elastic/elasticsearch)
-> Swashbuckle v5.0 - [URL](https://github.com/domaindrivendev/Swashbuckle/)
+> C# como linguagem de programação usando o framework .NET 4.6 
+> WebAPi Restful 
+> ElasticSearch v5.4.0 - [URL](https://github.com/elastic/elasticsearch) 
+> Swashbuckle v5.0 - [URL](https://github.com/domaindrivendev/Swashbuckle/) 
 
-#### Aplicação
+### Aplicação
 
 **Divida Controller**
 
-> POST /api/Divida/setDivida
-> GET /api/Divida/getDivida
+> POST /api/Divida/setDivida 
+> GET /api/Divida/getDivida 
 
 **Pessoa Controller**
 
-> GET /api/Pessoa/getPessoas
-> POST /api/Pessoa/setPessoa
-> POST /api/Pessoa/getbyseq
+> GET /api/Pessoa/getPessoas 
+> POST /api/Pessoa/setPessoa 
+> POST /api/Pessoa/getbyseq 
 
 ## Mundipagg.Web
 
@@ -44,9 +44,9 @@ A solution foi divida pela responsabilidade dos projetos:
 
 #### Tecnologias
 
-> AngularJS v1.6.4
-> UI.Router v0.4.2
-> ngProgressLite v1.0.8 - [URL](https://github.com/voronianski/ngprogress-lite/)
-> Angular Toastr - [URL](https://github.com/Foxandxss/angular-toastr)
-> Boostrap Framework
-> HTML5, CSS3, Javascript
+> AngularJS v1.6.4 
+> UI.Router v0.4.2 
+> ngProgressLite v1.0.8 - [URL](https://github.com/voronianski/ngprogress-lite/) 
+> Angular Toastr - [URL](https://github.com/Foxandxss/angular-toastr) 
+> Boostrap Framework 
+> HTML5, CSS3, Javascript 
