@@ -14,9 +14,13 @@ A solution foi divida pela responsabilidade dos projetos:
 - Mundipagg.API.Tests = Tests unitários em cima da WebAPI
 - Mundipagg.Web = Interface Front-End
 
+
+
 ## Mundipagg.API
 
 - URL: http://localhost:2017
+
+
 
 ### Tecnologias
 
@@ -25,12 +29,19 @@ A solution foi divida pela responsabilidade dos projetos:
 > ElasticSearch v5.4.0 - [URL](https://github.com/elastic/elasticsearch)  
 > Swashbuckle v5.0 - [URL](https://github.com/domaindrivendev/Swashbuckle/)  
 
+
+
 ### Aplicação
+
+
 
 **Divida Controller**
 
 > POST /api/Divida/setDivida  
+> POST /api/Divida/getbyseq
 > GET /api/Divida/getDivida  
+
+
 
 **Pessoa Controller**
 
@@ -53,8 +64,10 @@ A solution foi divida pela responsabilidade dos projetos:
 
 
 
-## ToDo
+## Observações
 
-- Buscar dividendos
-- Pagamentos
-- UnitTest
+- Tenha certeza que o projeto .API está rodando em http://localhost:2017
+- Tenha certeza que o projeto .API esteja gerando o arquivo XML Documentation \bin\Mundipagg.API.xml
+- Tenha certeza que o projeto .WEB está rodando em http://localhost:3000
+
+- Ao rodar a Solution, .API abrirá uma Help Page falando sobre os endpoints da web api; .WEB abrirá a página da interface da aplicação.
