@@ -50,3 +50,10 @@ A solution foi divida pela responsabilidade dos projetos:
 > Angular Toastr - [URL](https://github.com/Foxandxss/angular-toastr)  
 > Boostrap Framework  
 > HTML5, CSS3, Javascript  
+
+
+
+## ToDo
+
+- Buscar dividendos
+- Pagamentos
