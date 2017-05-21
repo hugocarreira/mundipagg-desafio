@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
+//using Swashbuckle;
 
 namespace Mundipagg.API
 {
@@ -11,6 +12,7 @@ namespace Mundipagg.API
     {
         protected void Application_Start()
         {
+            //SwaggerConfig.Register(GlobalConfiguration.Configuration);
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

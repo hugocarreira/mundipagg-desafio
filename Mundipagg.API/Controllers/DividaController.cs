@@ -11,11 +11,15 @@ using Nest;
 
 namespace Mundipagg.API.Controllers
 {
+
     [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class DividaController : ApiController
     {
         private ElasticClient service;
 
+        /// <summary>  
+        /// start ElasticSearch Connect with defaultIndex = api  
+        /// </summary>  
         public DividaController()
         {
             var settings = new ConnectionSettings(new Uri("http://localhost:9200")).DefaultIndex("api");        

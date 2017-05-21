@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Swashbuckle;
 
 namespace Mundipagg.API
 {
@@ -19,6 +20,7 @@ namespace Mundipagg.API
                 routeTemplate: "api/{controller}/{action}/{id}",
             defaults: new { id = RouteParameter.Optional }
             );
+
         }
     }
 }
