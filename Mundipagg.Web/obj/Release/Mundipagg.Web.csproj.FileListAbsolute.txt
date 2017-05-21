@@ -44,3 +44,4 @@ C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipa
 C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.Web\bin\System.Web.WebPages.Razor.xml
 C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.Web\obj\Release\Mundipagg.Web.dll
 C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.Web\obj\Release\Mundipagg.Web.pdb
+C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.Web\obj\Release\Mundipagg.Web.csprojResolveAssemblyReference.cache
