@@ -12,12 +12,26 @@
 
         var factory = {
             getDividas: getDividas,
-            setDivida: setDivida
+            setDivida: setDivida,
+            getDivida: getDivida
         }
 
         
         function getDividas() {
-            return $http.get('http://localhost:2017/api/divida/getpessoas/_search');
+            return $http.get('http://localhost:2017/api/divida/getDivida/_search');
+        }
+
+        function getDivida(id) {
+
+            var jsonData = JSON.stringify({ 'SequencialDivida': id });
+            return $http({
+                method: 'POST',
+                url: 'http://localhost:2017/api/divida/getbyseq/',
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                },
+                data: jsonData
+            });
         }
 
         function setDivida(dados) {
@@ -33,6 +47,7 @@
                 data: jsonData
             });
         }
+
 
         return factory;
         

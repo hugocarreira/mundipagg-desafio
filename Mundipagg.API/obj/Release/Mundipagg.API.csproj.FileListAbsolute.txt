@@ -60,6 +60,6 @@ C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipa
 C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\bin\System.Net.Http.Formatting.xml
 C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\bin\System.Web.Http.xml
 C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\bin\System.Web.Http.WebHost.xml
-C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\obj\Debug\Mundipagg.API.csprojResolveAssemblyReference.cache
-C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\obj\Debug\Mundipagg.API.dll
-C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\obj\Debug\Mundipagg.API.pdb
+C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\obj\Release\Mundipagg.API.csprojResolveAssemblyReference.cache
+C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\obj\Release\Mundipagg.API.dll
+C:\Users\hugocolombo\Documents\Visual Studio 2017\Projects\Mundipagg.API\Mundipagg.API\obj\Release\Mundipagg.API.pdb

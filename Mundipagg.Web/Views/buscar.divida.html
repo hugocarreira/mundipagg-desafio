@@ -1,0 +1,35 @@
+﻿<div class="row" ng-style="{opacity: vm.show}">
+    <div class="container" ng-show="vm.show">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <div class="col-lg-12">
+                    <fieldset>
+                        <legend>{{vm.title}}</legend>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Local</th>
+                                    <th>Data</th>
+                                    <th>Descrição</th>
+                                    <th>Valor Total</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="divida in vm.dividas">
+                                    <th scope="row">{{divida.SequencialDivida}}</th>
+                                    <td>{{divida.Local}}</td>
+                                    <td>{{divida.Data | date: 'dd/MM/yyyy'}}</td>
+                                    <td>{{divida.Descricao}}</td>
+                                    <td>R$ {{divida.ValorTotal}}</td>
+                                    <th><span align="center"><a ui-sref="home.divida({id: {{divida.SequencialDivida}}})"><i class="glyphicon glyphicon-search"></i></a></span></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

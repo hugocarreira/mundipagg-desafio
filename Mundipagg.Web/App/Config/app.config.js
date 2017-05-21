@@ -19,10 +19,17 @@
                     controllerAs: "vm"
                 })
 
+                .state('home.divida', {
+                    url: 'divida/:id',
+                    templateUrl: 'Views/pessoa.html',
+                    controller: "PessoaController",
+                    controllerAs: "vm"
+                })
+
                 .state('home.adicionar', {
                     url: 'adicionar',
                     templateUrl: 'Views/adicionar.html',
-                    controller: "AdicionarController",
+                    controller: "DividaController",
                     controllerAs: "vm"
                 })
 
@@ -33,19 +40,18 @@
                     controllerAs: "vm"
                 })
 
-                .state('home.pagar', {
-                    url: 'pagar',
-                    templateUrl: 'Views/pagar.html',
-                    controller: "PagarController",
+                .state('home.buscar.divida', {
+                    url: '/divida',
+                    templateUrl: 'Views/buscar.divida.html',
+                    controller: "BuscarController",
                     controllerAs: "vm"
                 })
 
-                .state('home.divida', {
-                    url: 'divida/:id',
-                    templateUrl: 'Views/pessoa.html',
-                    controller: "PessoaController",
+                .state('home.buscar.pessoa', {
+                    url: '/pessoa',
+                    templateUrl: 'Views/buscar.pessoa.html',
+                    controller: "BuscarController",
                     controllerAs: "vm"
                 })
-
         }
 })();

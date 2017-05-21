@@ -1,33 +1,18 @@
-﻿<div class="row" ng-style="{opacity: vm.show}">
+﻿
+<div class="row" ng-style="{opacity: vm.show}">
     <div class="container" ng-show="vm.show">
         <div class="container-fluid">
             <div class="col-lg-12">
-                <div class="col-lg-12">
-                    <fieldset>
-                        <legend>{{vm.title}}</legend>
-                            
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Nome</th>
-                                        <th>Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ng-repeat="pessoa in vm.pessoas">
-                                        <th scope="row">{{pessoa.Id}}</th>
-                                        <td>{{pessoa.Nome}} {{pessoa.Sobrenome}}</td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-
-                    </fieldset>
+                <div class="row left-right">
+                    <div class="col-sm-12">
+                        <a class="btn btn-large btn-default" ui-sref="home.buscar.divida"><i class="glyphicon glyphicon-search"></i> Ocorridos</a>
+                        <a class="btn btn-large btn-default" ui-sref="home.buscar.pessoa"><i class="glyphicon glyphicon-search"></i> Pessoas</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<hr />
+<ui-view></ui-view>
 

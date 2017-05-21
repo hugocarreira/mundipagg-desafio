@@ -1,0 +1,40 @@
+﻿<div class="row" ng-style="{opacity: vm.show}">
+    <div class="container" ng-show="vm.show">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <div class="col-lg-12">
+                    <fieldset>
+                        <legend>{{vm.title}}</legend>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nome</th>
+                                    <th>Valor Pago</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="pessoa in vm.pessoas">
+                                    <th scope="row">{{pessoa.SequencialPessoa}}</th>
+                                    <td>{{pessoa.Nome}} {{pessoa.Sobrenome}}</td>
+                                    <td>R$ {{pessoa.ValorPago}}</td>
+                                    <th>
+                                    <span>
+                                        <a ui-sref="home.divida({id: {{pessoa.SequencialPessoaDivida}}})">
+                                            <i class="glyphicon glyphicon-search"></i>
+                                        </a>
+                                        <a ui-sref="home.buscar.pessoa.pagar({id: {{pessoa.SequencialPessoa}}})" class="btn-success"  alt="Pagar" target="_self">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </a>
+                                    </span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

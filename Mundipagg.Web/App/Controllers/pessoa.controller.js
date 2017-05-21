@@ -14,16 +14,13 @@
         vm.show = 0;
         ngProgressLite.start();
         $timeout(function () {
+            listarPessoas();
             ngProgressLite.done();
             vm.show = 1;
         }, 250);
 
         vm.title = 'Cadastre as pessoas envolvidas';
-
-        
         vm.cadastrarPessoa = cadastrarPessoa;
-        //vm.addPessoa = addPessoa;
-        //vm.removerPessoa = removerPessoa;       
 
         var SequencialPessoaDivida = $location.path().replace(/\D/g, '');        
 
@@ -33,16 +30,19 @@
             formInput.SequencialPessoaDivida = SequencialPessoaDivida;
 
             servicoPessoa.setPessoas(formInput).then(function (successCallback) {
-                toastr.success('Pessoa cadastrada com sucesso!');
-                $state.reload();
+                toastr.success('Pessoa cadastrada com sucesso!');       
+                listarPessoas();
+                $timeout(function () {
+                    $state.go('home.divida', { id: SequencialPessoaDivida }, { reload: true });
+                }, 200);
             });
         }
 
-        servicoPessoa.getPessoas(SequencialPessoaDivida).then(function (res) {
-            vm.pessoas = res.data;
-        });
-        
-               
+        function listarPessoas() {
+            servicoPessoa.getPessoas(SequencialPessoaDivida).then(function (res) {
+                vm.pessoas = res.data;
+            });
+        }                           
     }
 })();
 

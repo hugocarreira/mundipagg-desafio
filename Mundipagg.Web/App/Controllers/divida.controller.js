@@ -4,11 +4,11 @@
 
     angular
         .module('Mundipagg.Web.Controllers')
-        .controller('AdicionarController', AdicionarController);
+        .controller('DividaController', DividaController);
 
 
-    AdicionarController.$inject = ['servicoDivida', '$state', 'ngProgressLite', '$timeout', 'toastr'];
-    function AdicionarController(servicoDivida, $state, ngProgressLite, $timeout, toastr) {
+    DividaController.$inject = ['servicoDivida', '$state', 'ngProgressLite', '$timeout', 'toastr'];
+    function DividaController(servicoDivida, $state, ngProgressLite, $timeout, toastr) {
         var vm = this;
 
         vm.show = 0;
@@ -31,8 +31,6 @@
             })
         }
 
-
-        
     }
 })();
 
