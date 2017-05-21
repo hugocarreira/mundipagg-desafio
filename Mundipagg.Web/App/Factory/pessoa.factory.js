@@ -13,21 +13,9 @@
         var factory = {
             getTodasPessoas: getTodasPessoas,
             getPessoas: getPessoas,
-            setPessoas: setPessoas,
-            setPagamento: setPagamento
+            setPessoas: setPessoas
         }
 
-        function setPagamento(id) {
-            var jsonData = JSON.stringify({ 'SequencialPessoa': id });
-            return $http({
-                method: 'POST',
-                url: 'http://localhost:2017/api/pessoa/setpagamento/',
-                headers: {
-                    'Content-Type': 'application/json; charset=UTF-8'
-                },
-                data: jsonData
-            });
-        }
 
         function getTodasPessoas() {
             return $http.get('http://localhost:2017/api/pessoa/getPessoas/_search');
