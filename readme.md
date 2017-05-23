@@ -38,7 +38,7 @@ A solution foi divida pela responsabilidade dos projetos:
 **Divida Controller**
 
 > POST /api/Divida/setDivida  
-> POST /api/Divida/getbyseq
+> POST /api/Divida/getbyseq  
 > GET /api/Divida/getDivida  
 
 
@@ -67,7 +67,7 @@ A solution foi divida pela responsabilidade dos projetos:
 ## Observações
 
 - Tenha certeza que o projeto .API está rodando em http://localhost:2017
-- Tenha certeza que o projeto .API esteja gerando o arquivo XML Documentation \bin\Mundipagg.API.xml
+- Tenha certeza que o projeto .API está gerando o arquivo XML Documentation \bin\Mundipagg.API.xml
 - Tenha certeza que o projeto .WEB está rodando em http://localhost:3000
 
 - Ao rodar a Solution, .API abrirá uma Help Page falando sobre os endpoints da web api; .WEB abrirá a página da interface da aplicação.
